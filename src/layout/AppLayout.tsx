@@ -1,0 +1,27 @@
+import { Container, Flex } from "@chakra-ui/react";
+import React from "react";
+
+interface AppLayoutProps {
+  children: React.ReactNode;
+}
+export const AppLayout = ({ children }: AppLayoutProps) => {
+  return (
+    <>
+      <Container
+        as={Flex}
+        gap='5'
+        flexDirection='column'
+        justifyContent='start'
+        alignItems='center'
+        maxW='container.2xl'
+        minH='100vh'
+        px={{ base: "4", md: "0" }}
+        py={{ base: "2", md: "0" }}
+      >
+        <Flex pt='150' flexDirection='column' w='full' h='full' flexGrow='1'>
+          {children}
+        </Flex>
+      </Container>
+    </>
+  );
+};
