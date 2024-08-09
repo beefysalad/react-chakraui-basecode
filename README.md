@@ -27,7 +27,7 @@ Welcome to the **React + Chakra UI Base Code** repository! This project provides
 
 ## Demo
 
-Check out a live demo of this base code [here](https://yourdemo.com) to see it in action.
+Check out a live demo of this base code [here](https://react-basecode.vercel.app/) to see it in action.
 
 ## Getting Started
 
