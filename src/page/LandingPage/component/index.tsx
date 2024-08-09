@@ -1,11 +1,10 @@
 import { Box, Text } from "@chakra-ui/react";
-import { useParams } from "react-router-dom";
+import React from "react";
 
 export const LandingPage = () => {
-  const { id } = useParams();
   return (
     <Box>
-      <Text>Landing Page {id}</Text>
+      <Text>Landing Page</Text>
     </Box>
   );
 };
