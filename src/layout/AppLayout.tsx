@@ -1,5 +1,6 @@
 import { Container, Flex } from "@chakra-ui/react";
 import React from "react";
+import { ColorModeSwitcher } from "../shared/components/ColorModeSwitcher";
 
 interface AppLayoutProps {
   children: React.ReactNode;
@@ -7,6 +8,7 @@ interface AppLayoutProps {
 export const AppLayout = ({ children }: AppLayoutProps) => {
   return (
     <>
+      <ColorModeSwitcher />
       <Container
         as={Flex}
         gap='5'
