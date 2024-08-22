@@ -5,10 +5,10 @@ import { LandingPage } from "../page/LandingPage/component";
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <LandingPage />,
   },
   {
-    path: "/landing-page/:id",
-    element: <LandingPage />,
+    path: "/home",
+    element: <Home />,
   },
 ]);
