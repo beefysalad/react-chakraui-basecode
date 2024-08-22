@@ -1,14 +1,17 @@
 import { Container, Flex } from "@chakra-ui/react";
 import React from "react";
-import { ColorModeSwitcher } from "../shared/components/ColorModeSwitcher";
+import Footer from "../shared/components/Footer";
+import Header from "../shared/components/Header";
 
 interface AppLayoutProps {
   children: React.ReactNode;
 }
 export const AppLayout = ({ children }: AppLayoutProps) => {
+  const location = window.location.pathname;
+  const isHome = location === "/";
   return (
     <>
-      <ColorModeSwitcher />
+      {isHome ? null : <Header />}
       <Container
         as={Flex}
         gap='5'
@@ -23,6 +26,7 @@ export const AppLayout = ({ children }: AppLayoutProps) => {
         <Flex pt='150' flexDirection='column' w='full' h='full' flexGrow='1'>
           {children}
         </Flex>
+        <Footer />
       </Container>
     </>
   );

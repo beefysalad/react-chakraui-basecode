@@ -1,4 +1,4 @@
-import { extendTheme, type ThemeConfig } from "@chakra-ui/react";
+import { Drawer, extendTheme, type ThemeConfig } from "@chakra-ui/react";
 import type { StyleFunctionProps } from "@chakra-ui/styled-system";
 import { mode } from "@chakra-ui/theme-tools";
 
@@ -6,14 +6,16 @@ const config: ThemeConfig = {
   initialColorMode: "dark",
   useSystemColorMode: false,
 };
-
+const BACKGROUND_COLORS = {
+  LIGHT: "gray.50",
+  DARK: "rgb(42, 43, 43)",
+};
 const theme = extendTheme(config, {
   styles: {
     global: (props: StyleFunctionProps) => ({
       body: {
         color: mode("gray.800", "#ccd6f6")(props),
-        // bg: mode('gray.50', 'gray.800')(props),
-        bg: mode("gray.50", "rgb(9,24,47)")(props),
+        bg: mode(BACKGROUND_COLORS.LIGHT, BACKGROUND_COLORS.DARK)(props),
       },
     }),
   },
@@ -46,6 +48,13 @@ const theme = extendTheme(config, {
           bg: mode("gray.200", "whiteAlpha.200")(props),
         }),
       },
+    },
+    Drawer: {
+      baseStyle: (props: StyleFunctionProps) => ({
+        dialog: {
+          bg: mode(BACKGROUND_COLORS.LIGHT, BACKGROUND_COLORS.DARK)(props),
+        },
+      }),
     },
   },
 });
