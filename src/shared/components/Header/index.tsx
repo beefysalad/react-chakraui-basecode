@@ -34,7 +34,7 @@ const Header = () => {
                   target='_blank'
                   _hover={{ underline: "none" }}
                 >
-                  BeefySalad
+                  Trek
                 </Link>
               </HStack>
             </Heading>
@@ -56,7 +56,7 @@ const Header = () => {
         <DrawerContent>
           <DrawerHeader>
             <HStack>
-              <Heading size='md'>BeefySalad</Heading>
+              <Heading size='md'>Trek</Heading>
             </HStack>
           </DrawerHeader>
           <DrawerBody></DrawerBody>
